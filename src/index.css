@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+/* 1. Design tokens as CSS variables */
+:root {
+  --background: 210 20% 98%;
+  --foreground: 215 25% 15%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 25% 15%;
+
+  --primary: 200 95% 35%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 15% 92%;
+  --secondary-foreground: 215 25% 15%;
+
+  --muted: 210 15% 95%;
+  --muted-foreground: 215 15% 45%;
+
+  --accent: 185 85% 45%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 210 20% 88%;
+  --input: 210 20% 88%;
+  --ring: 200 95% 35%;
+
+  --radius: 0.75rem;
+
+  --hero-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  --section-bg: 0 0% 100%;
+  --shadow-sm: 0 2px 8px hsl(var(--foreground) / 0.05);
+  --shadow-md: 0 4px 16px hsl(var(--foreground) / 0.08);
+  --shadow-lg: 0 8px 32px hsl(var(--foreground) / 0.12);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode overrides */
+.dark {
+  --background: 215 30% 8%;
+  --foreground: 210 20% 95%;
+
+  --card: 215 25% 12%;
+  --card-foreground: 210 20% 95%;
+
+  --popover: 215 25% 12%;
+  --popover-foreground: 210 20% 95%;
+
+  --primary: 200 95% 45%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 215 20% 18%;
+  --secondary-foreground: 210 20% 95%;
+
+  --muted: 215 20% 18%;
+  --muted-foreground: 215 15% 65%;
+
+  --accent: 185 85% 50%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62.8% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 215 20% 20%;
+  --input: 215 20% 20%;
+  --ring: 200 95% 45%;
+
+  --hero-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  --section-bg: 215 25% 12%;
+  --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+  --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+  --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+}
+
+/* 2. Base styles */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 3. Utilities */
+@layer utilities {
+  .section-padding {
+    @apply py-15 px-6 md:px-12 lg:px-20;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* BUTTONS: explicit CSS using variables */
+  .btn-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+  }
+  .btn-primary:hover {
+    background-color: hsl(var(--accent));
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: hsl(var(--primary));
+    border: 2px solid hsl(var(--primary));
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+  }
+  .btn-outline:hover {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
