@@ -16,12 +16,12 @@ const Hero = () => {
 
       <div className="container-custom section-padding text-center relative z-10 animate-fade-in">
         <div className="space-y-3 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <Avatar className="h-40 w-40 md:h-50 md:w-50 border-4  shadow-lg">
+          <div className="flex justify-center mb-5">
+            <Avatar className="h-40 w-40 md:h-50 md:w-50 border-4  shadow-lg bg-cover bg-left">
               <AvatarImage
                 src="src\images\IMG-20250702-WA0023_1~2.jpg"
                 alt="Profile Picture"
-                className="bg-cover bg-center"
+                className=""
               />
               <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
                 YN
