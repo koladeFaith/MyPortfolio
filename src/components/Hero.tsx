@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import logo from "@/images/logo.png";
+import profilePics from "@/images/IMG-20250702-WA0023_1~2.jpg";
+import bgImage from "@/images/image-1.png";
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -20,7 +21,8 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[url('/src\images\image-1.png')] h-64 w-full bg-cover bg-center px-4">
+      className="min-h-screen flex items-center justify-center relative overflow-hidden w-full bg-cover bg-center px-4"
+      style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
 
       <div className="container-custom section-padding relative z-10 animate-fade-in text-center lg:text-start">
@@ -28,7 +30,7 @@ const Hero = () => {
           <div className="lg:flex justify-between items-center gap-28">
             <div className="flex justify-center mb-5 animate-on-scroll slide-in-left">
               <Avatar className="h-40 w-40 lg:h-80 lg:w-80 border-4 shadow-lg bg-cover bg-left">
-                <AvatarImage src={logo} alt="Profile Picture" />
+                <AvatarImage src={profilePics} alt="Profile Picture" />
                 <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
                   KF
                 </AvatarFallback>

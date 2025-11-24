@@ -1,8 +1,11 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import bgImage from "@/images/image-1.png";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-[url('/src\images\image-1.png')] h-58  w-full bg-cover bg-left border-t">
+    <footer
+      className="relative overflow-hidden w-full bg-cover bg-left border-t"
+      style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container-custom py-8">
         <div className="flex flex-col items-center gap-6 animate-on-scroll slide-in-up">
           <div className="flex gap-4 justify-center pt-8 stagger animate-on-scroll">
