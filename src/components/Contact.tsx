@@ -73,6 +73,7 @@ const Contact = () => {
             <div>
               <Input
                 placeholder="Your Name"
+                required
                 className="h-12  border-blue-300 outline-none
     
     focus:ring-2 focus:ring-blue-500"
@@ -82,6 +83,7 @@ const Contact = () => {
               <Input
                 type="email"
                 placeholder="Your Email"
+                required
                 className="h-12 border-blue-300 outline-none
     
     focus:ring-2 focus:ring-blue-500"
@@ -90,6 +92,7 @@ const Contact = () => {
             <div>
               <Input
                 placeholder="Subject"
+                required
                 className="h-12 border-blue-300 outline-none
     
     focus:ring-2 focus:ring-blue-500 "
@@ -98,6 +101,7 @@ const Contact = () => {
             <div>
               <Textarea
                 placeholder="Your Message "
+                required
                 className="min-h-[150px] resize-none border-blue-300 outline-none
     
     focus:ring-2 focus:ring-blue-500"

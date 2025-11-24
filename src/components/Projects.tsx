@@ -16,15 +16,15 @@ const Projects = () => {
       title: "E-commerce Platform",
       description:
         "A modern, responsive e-commerce website with shopping cart functionality and payment integration",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
+      tech: ["React","Javascript", "Tailwind CSS"],
       image:
         "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
     },
     {
-      title: "Task Management App",
+      title: "Note Keep App",
       description:
         "Collaborative task management application with real-time updates and team features",
-      tech: ["React", "REST API", "CSS3"],
+      tech: ["HTML", "Javascript", "CSS3"],
       image:
         "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
     },
