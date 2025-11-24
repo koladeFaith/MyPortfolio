@@ -7,12 +7,12 @@ const Skills = () => {
     {
       title: "Frontend",
       skills: [
+        "HTML5",
+        "CSS3",
         "React",
         "TypeScript",
         "JavaScript",
         "Next.js",
-        "HTML5",
-        "CSS3",
         "Tailwind CSS",
         "Node.js",
       ],
@@ -37,13 +37,11 @@ const Skills = () => {
           Skills & <span className="text-gradient">Technologies</span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 stagger animate-on-scroll">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className={`bg-card p-8 rounded-lg card-shadow hover:card-shadow-hover transition-all bg-[#fafafa60]  duration-700 ${
-                isVisible ? "animate-slide-up" : "opacity-0"
-              }`}
+              className={`bg-card p-8 rounded-lg card-shadow hover:card-shadow-hover transition-all bg-[#fafafa60]  duration-700 slide-in-right`}
               style={{ animationDelay: `${200 + index * 150}ms` }}>
               <h3 className="text-2xl font-semibold mb-6  ">
                 {category.title}

@@ -8,8 +8,12 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
+      // lower threshold so scrolled styling appears sooner over the hero
+      setIsScrolled(window.scrollY > 20);
     };
+
+    // run once on mount to set initial state
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -44,18 +48,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-99 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
         isScrolled
-          ? "/80 backdrop-blur-md border-b border-border shadow-sm"
+          ? "bg-white/10 backdrop-blur-md border-b border-border shadow-sm"
           : "bg-transparent"
       }`}>
-      <div className="">
+      <div>
         <div className="flex items-center justify-between h-16 lg:mx-10 xl:mx-60">
           {/* FIXED LOGO */}
           <img
             src={logo}
             onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold text-gradient hover:opacity-80 transition-opacity w-30 lg:w-40 cursor-pointer z-99"
+            className="text-xl font-bold text-gradient hover:opacity-80 transition-opacity w-30 lg:w-40 cursor-pointer z-100"
           />
 
           <div className="hidden lg:flex items-center gap-9">
@@ -70,9 +74,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          <button className="hidden lg:flex hover:cursor-pointer">
+          <a
+            href="/resume.pdf"
+            download
+            aria-label="Download resume"
+            className="hidden lg:inline-flex items-center hover:cursor-pointer">
             My Resume
-          </button>
+          </a>
 
           <Button
             variant="ghost"
@@ -80,7 +88,7 @@ const Navbar = () => {
             className="lg:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
-              <X size={34} className="z-99" />
+              <X size={34} className="z-100" />
             ) : (
               <Menu size={34} />
             )}
@@ -94,10 +102,9 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}></div>
         )}
 
-        {/* ⭐ FIXED: z-[100] NOT z-100 */}
         <div
           className={`
-            py-4 fixed backdrop-blur-xl w-full h-full z-99
+            py-4 fixed backdrop-blur-xl w-full h-full z-100
             transition-transform duration-300
             ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
           `}>
@@ -111,7 +118,13 @@ const Navbar = () => {
               </button>
             ))}
             <hr className="bg-red-200 w-40 mt-10" />
-            <button className="hover:cursor-pointer text-2xl">My Resume</button>
+            <a
+              href="/resume.pdf"
+              download
+              aria-label="Download resume"
+              className="hover:cursor-pointer text-2xl">
+              My Resume
+            </a>
           </div>
         </div>
       </div>

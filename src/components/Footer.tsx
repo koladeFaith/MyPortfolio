@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-[url('/src\images\image-1.png')] h-58  w-full bg-cover bg-left border-t">
       <div className="container-custom py-8">
-        <div className="flex flex-col items-center gap-6">
-          <div className="flex gap-4 justify-center pt-8">
+        <div className="flex flex-col items-center gap-6 animate-on-scroll slide-in-up">
+          <div className="flex gap-4 justify-center pt-8 stagger animate-on-scroll">
             <a
               href="https://github.com/koladeFaith"
               target="_blank"

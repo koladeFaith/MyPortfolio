@@ -19,6 +19,8 @@ const Projects = () => {
       tech: ["React", "Javascript", "Tailwind CSS"],
       image:
         "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/Google_Keep_Project",
+      liveUrl: "https://food-delivery-five-chi.vercel.app/",
     },
     {
       title: "Note Keep App",
@@ -27,6 +29,8 @@ const Projects = () => {
       tech: ["HTML", "Javascript", "CSS3"],
       image:
         "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/note-keep-app",
+      liveUrl: "https://google-keep-project.vercel.app/",
     },
     {
       title: "Portfolio Dashboard",
@@ -35,6 +39,8 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Recharts"],
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/portfolio-dashboard",
+      liveUrl: "https://dashboard.example.com",
     },
   ];
 
@@ -48,13 +54,11 @@ const Projects = () => {
           Featured <span className="text-gradient">Projects</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger animate-on-scroll">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`overflow-hidden hover-lift card-shadow hover:card-shadow-hover bg-[#fafafa60] hover:cursor-pointer transition-all duration-700 ${
-                isVisible ? "animate-scale-in" : "opacity-0"
-              }`}
+              className={`overflow-hidden hover-lift card-shadow hover:card-shadow-hover bg-[#fafafa60] hover:cursor-pointer transition-all duration-700 slide-in-right`}
               style={{ animationDelay: `${200 + index * 150}ms` }}>
               <div className="aspect-video overflow-hidden bg-muted">
                 <img
@@ -80,19 +84,34 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-blue-200 bg-[#fafafab4] hover:opacity-70 hover:cursor-pointer">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="flex-1 bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-70 hover:cursor-pointer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live
-                  </Button>
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} - code`}
+                    className="flex-1">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full flex-1 border-blue-200 bg-[#fafafab4] hover:opacity-70 hover:cursor-pointer">
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </Button>
+                  </a>
+
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} - live demo`}
+                    className="flex-1">
+                    <Button
+                      size="sm"
+                      className="w-full flex-1 bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-70 hover:cursor-pointer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>

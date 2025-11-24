@@ -1,11 +1,7 @@
 #root {
   margin: 0 auto;
-  /* text-align: center; */
-  /* max-width: 2080px; */
-  /* padding: 2rem; */
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   min-height: 100vh;
- 
 }
 
 .logo {
@@ -69,13 +65,180 @@
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
+  }
+}
+/* Do not apply transform-based animations to all root children.
+   Animating `transform` on an ancestor creates a containing block that
+   causes `position: fixed` to behave like `position: absolute`.
+   Apply opacity-only animation to avoid breaking fixed positioning. */
+#root > * {
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+/* Scroll reveal utilities */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: opacity, transform;
+}
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Slightly different nav entrance */
+.nav-animate {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 500ms ease, transform 500ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.nav-animate.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Slide-in helpers for left/right entrances */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 640ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 720ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform, opacity;
+}
+.slide-in-left.in-view {
+  opacity: 1;
+  transform: none;
+}
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 640ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 720ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform, opacity;
+}
+.slide-in-right.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 640ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 720ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform, opacity;
+}
+.slide-in-up.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ken Burns: slow zoom + subtle pan for hero background */
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.04) translateY(-6px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+.ken-burns {
+  background-position: center;
+  background-size: cover;
+  animation: ken-burns 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Typewriter for hero name */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(0, 0, 0, 0.12);
+  font-family: inherit;
+}
+.typewriter-text {
+  display: inline-block;
+  transform-origin: left;
+  /* animate width using steps to simulate typing */
+  animation: typing 2.4s steps(22, end) 0s 1 normal both,
+    blink-caret 0.8s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Scale + fade: subtle scale up + opacity for cards */
+.scale-fade {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 560ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    transform 640ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform, opacity;
+}
+.scale-fade.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Utility to stagger direct children (optional use) */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.stagger.in-view > * {
+  opacity: 1;
+  transform: none;
+}
+.stagger.in-view > *:nth-child(1) {
+  transition-delay: 80ms;
+}
+.stagger.in-view > *:nth-child(2) {
+  transition-delay: 160ms;
+}
+.stagger.in-view > *:nth-child(3) {
+  transition-delay: 240ms;
+}
+.stagger.in-view > *:nth-child(4) {
+  transition-delay: 320ms;
+}
+
+/* Floating action animation (used for arrow-down in hero) */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
     transform: translateY(0);
   }
 }
-#root > * {
-  animation: fade-in-up 0.8s ease forwards;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+  will-change: transform;
 }

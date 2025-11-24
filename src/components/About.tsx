@@ -22,23 +22,18 @@ const About = () => {
   ];
 
   return (
-    <section
-      id="about"
-      className="section-padding bg-[#DCDBDB]
-">
+    <section id="about" className="section-padding bg-[#DCDBDB]">
       <div className="container-custom" ref={ref}>
         <h2
           className={`text-4xl md:text-5xl font-bold text-center mb-12 transition-all duration-700 ${
-            isVisible ? "animate-fade-in" : "opacity-0"
+            isVisible ? "animate-fade-in" : "opacity-100"
           }`}>
           About <span className="text-gradient">Me</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div
-            className={`space-y-6 transition-all duration-700 delay-200 ${
-              isVisible ? "animate-slide-in-left" : "opacity-0"
-            }`}>
+            className={`space-y-6 transition-all duration-700 delay-200 animate-on-scroll slide-in-left`}>
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm a passionate frontend developer with expertise in building
               modern web applications. I specialize in creating seamless user
@@ -51,13 +46,11 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-6 stagger animate-on-scroll">
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className={`bg-card p-6 rounded-lg card-shadow hover:card-shadow-hover bg-[#fafafa60]  hover-lift transition-all duration-700 ${
-                  isVisible ? "animate-slide-in-right" : "opacity-0"
-                }`}
+                className={`bg-card p-6 rounded-lg card-shadow hover:card-shadow-hover bg-[#fafafa60]  hover-lift transition-all duration-700 slide-in-right`}
                 style={{ animationDelay: `${400 + index * 150}ms` }}>
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-blue-200 rounded-lg">
