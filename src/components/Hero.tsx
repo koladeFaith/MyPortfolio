@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-
+import logo from "@/images/logo.png";
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -28,10 +28,7 @@ const Hero = () => {
           <div className="lg:flex justify-between items-center gap-28">
             <div className="flex justify-center mb-5 animate-on-scroll slide-in-left">
               <Avatar className="h-40 w-40 lg:h-80 lg:w-80 border-4 shadow-lg bg-cover bg-left">
-                <AvatarImage
-                  src="src\images\IMG-20250702-WA0023_1~2.jpg"
-                  alt="Profile Picture"
-                />
+                <AvatarImage src={logo} alt="Profile Picture" />
                 <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
                   KF
                 </AvatarFallback>
