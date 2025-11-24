@@ -14,12 +14,12 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[url('/src\images\image-1.png')] h-64  w-full bg-cover bg-center px-4">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
 
-      <div className="container-custom section-padding  relative z-10 animate-fade-in">
+      <div className="container-custom section-padding  relative z-10 animate-fade-in text-center lg:text-start">
         <div className="space-y-3 max-w-4xl mx-auto">
-          <div className="md:flex justify-between items-center gap-20">
+          <div className="lg:flex justify-between items-center gap-28">
             {" "}
             <div className="flex justify-center mb-5">
-              <Avatar className="h-40 w-40 md:h-70 md:w-70 border-4  shadow-lg bg-cover bg-left">
+              <Avatar className="h-40 w-40 lg:h-80 lg:w-80 border-4  shadow-lg bg-cover bg-left">
                 <AvatarImage
                   src="src\images\IMG-20250702-WA0023_1~2.jpg"
                   alt="Profile Picture"
@@ -30,19 +30,19 @@ const Hero = () => {
                 </AvatarFallback>
               </Avatar>
             </div>
-            <div className="space-y-2 max-w-4xl md:max-w-[500px] ">
+            <div className="space-y-2 max-w-4xl lg:max-w-[500px] ">
               {" "}
-              <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
+              <h1 className="text-2xl lg:text-5xl font-bold tracking-tight">
                 Hi, I'm <span className="text-gradient">Kolade Faith</span>
               </h1>
-              <p className="text-2xl md:text-3xl text-muted-foreground font-medium">
-                Frontend Developer 
+              <p className="text-3xl lg:text-4xl text-muted-foreground font-medium">
+                Frontend Developer
               </p>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="text-lg lg:text-lg text-muted-foreground max-w-2xl leading-relaxed">
                 Crafting beautiful, responsive, and user-friendly web
                 experiences with modern technologies
               </p>
-              <div className="flex gap-4 justify-center md:justify-normal pt-3 ">
+              <div className="flex gap-4 justify-center lg:justify-normal pt-3 ">
                 <Button
                   size="lg"
                   onClick={() => scrollToSection("projects")}
@@ -57,7 +57,7 @@ const Hero = () => {
                   Get In Touch
                 </Button>
               </div>
-              <div className="flex gap-4 justify-center md:justify-normal  pt-3">
+              <div className="flex gap-4 justify-center lg:justify-normal  pt-3">
                 <a
                   href="https://github.com/koladeFaith"
                   target="_blank"
