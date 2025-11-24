@@ -33,34 +33,34 @@ const Contact = () => {
 
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Mail className="w-5 h-5 text-primary" />
+                <div className="p-3  rounded-lg">
+                  <Mail className="w-5 h-5 text-blue-500 " />
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
                   <p className="text-muted-foreground">
-                    your.email@example.com
+                    faithkolade0507@gmail.com
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Phone className="w-5 h-5 text-primary" />
+                <div className="p-3  rounded-lg">
+                  <Phone className="w-5 h-5 text-blue-500 " />
                 </div>
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground"> +234 916 0824 156</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <MapPin className="w-5 h-5 text-primary" />
+                <div className="p-3  rounded-lg">
+                  <MapPin className="w-5 h-5 text-blue-500 " />
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-muted-foreground">Your City, Country</p>
+                  <p className="text-muted-foreground">Ogbomosho, Nigeria</p>
                 </div>
               </div>
             </div>
@@ -71,21 +71,39 @@ const Contact = () => {
               isVisible ? "animate-slide-in-right" : "opacity-0"
             }`}>
             <div>
-              <Input placeholder="Your Name" className="h-12 " />
+              <Input
+                placeholder="Your Name"
+                className="h-12  border-blue-300 outline-none
+    
+    focus:ring-2 focus:ring-blue-500"
+              />
             </div>
             <div>
-              <Input type="email" placeholder="Your Email" className="h-12 " />
+              <Input
+                type="email"
+                placeholder="Your Email"
+                className="h-12 border-blue-300 outline-none
+    
+    focus:ring-2 focus:ring-blue-500"
+              />
             </div>
             <div>
-              <Input placeholder="Subject" className="h-12 " />
+              <Input
+                placeholder="Subject"
+                className="h-12 border-blue-300 outline-none
+    
+    focus:ring-2 focus:ring-blue-500 "
+              />
             </div>
             <div>
               <Textarea
                 placeholder="Your Message "
-                className="min-h-[150px] resize-none"
+                className="min-h-[150px] resize-none border-blue-300 outline-none
+    
+    focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            <Button className="w-full h-12  bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-90 transition-opacity text-base">
+            <Button className="w-full h-12  bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-90 transition-opacity text-base hover:cursor-pointer">
               Send Message
             </Button>
           </form>

@@ -60,8 +60,8 @@ const About = () => {
                 }`}
                 style={{ animationDelay: `${400 + index * 150}ms` }}>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <item.icon className="w-6 h-6 text-primary" />
+                  <div className="p-3 bg-blue-200 rounded-lg">
+                    <item.icon className="w-6 h-6 text-blue-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-xl mb-2">{item.title}</h3>

@@ -43,7 +43,7 @@ const Skills = () => {
                 isVisible ? "animate-slide-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + index * 150}ms` }}>
-              <h3 className="text-2xl font-semibold mb-6 text-primary">
+              <h3 className="text-2xl font-semibold mb-6  ">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -51,7 +51,7 @@ const Skills = () => {
                   <Badge
                     key={skillIndex}
                     variant="secondary"
-                    className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                    className="text-sm py-2 px-4 bg-blue-200 hover:bg-blue-500 hover:text-primary-foreground transition-colors cursor-default">
                     {skill}
                   </Badge>
                 ))}

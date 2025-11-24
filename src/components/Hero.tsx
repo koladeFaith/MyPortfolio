@@ -16,11 +16,12 @@ const Hero = () => {
 
       <div className="container-custom section-padding text-center relative z-10 animate-fade-in">
         <div className="space-y-3 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <Avatar className="h-40 w-40 md:h-50 md:w-50 border-4  shadow-lg">
               <AvatarImage
                 src="src\images\IMG-20250702-WA0023_1~2.jpg"
-                alt="Profile Picture" className="bg-cover bg-center"
+                alt="Profile Picture"
+                className="bg-cover bg-center"
               />
               <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
                 YN
@@ -41,39 +42,39 @@ const Hero = () => {
             with modern technologies
           </p>
 
-          <div className="flex gap-4 justify-center pt-6">
+          <div className="flex gap-4 justify-center pt-6 ">
             <Button
               size="lg"
               onClick={() => scrollToSection("projects")}
-              className="bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-100 transition-opacity">
+              className="bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-100 transition-opacity font-medium hover:cursor-pointer">
               View My Work
             </Button>
             <Button
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("contact")}
-              className="border-2">
+              className="border-2 font-medium hover:cursor-pointer">
               Get In Touch
             </Button>
           </div>
 
           <div className="flex gap-4 justify-center pt-8">
             <a
-              href="https://github.com"
+              href="https://github.com/koladeFaith"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-muted transition-colors">
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/faith-kolade-817357384/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-muted transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:faithkolade0507@gmail.com"
               className="p-2 rounded-full hover:bg-muted transition-colors">
               <Mail className="w-6 h-6" />
             </a>
@@ -82,7 +83,7 @@ const Hero = () => {
 
         <button
           onClick={() => scrollToSection("about")}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float hover:cursor-pointer">
           <ArrowDown className="w-6 h-6 text-muted-foreground" />
         </button>
       </div>

@@ -52,7 +52,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`overflow-hidden hover-lift card-shadow hover:card-shadow-hover bg-[#fafafa60]  transition-all duration-700 ${
+              className={`overflow-hidden hover-lift card-shadow hover:card-shadow-hover bg-[#fafafa60] hover:cursor-pointer transition-all duration-700 ${
                 isVisible ? "animate-scale-in" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + index * 150}ms` }}>
@@ -70,11 +70,11 @@ const Projects = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4 ">
+                <div className="flex flex-wrap gap-2 mb-4  ">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="text-xs px-3 py-1 rounded-full">
+                      className="text-xs px-3 py-1 bg-blue-200 rounded-full">
                       {tech}
                     </span>
                   ))}
@@ -83,13 +83,13 @@ const Projects = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="flex-1 border-blue-200 bg-[#fafafab4] hover:opacity-70">
+                    className="flex-1 border-blue-200 bg-[#fafafab4] hover:opacity-70 hover:cursor-pointer">
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
                   <Button
                     size="sm"
-                    className="flex-1 bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-70">
+                    className="flex-1 bg-linear-to-r from-blue-500 to-teal-200 hover:opacity-70 hover:cursor-pointer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live
                   </Button>
