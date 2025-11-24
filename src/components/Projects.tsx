@@ -16,7 +16,7 @@ const Projects = () => {
       title: "E-commerce Platform",
       description:
         "A modern, responsive e-commerce website with shopping cart functionality and payment integration",
-      tech: ["React","Javascript", "Tailwind CSS"],
+      tech: ["React", "Javascript", "Tailwind CSS"],
       image:
         "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
     },

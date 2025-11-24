@@ -3,15 +3,24 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    const offset = 100;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[url('/src\images\image-1.png')] h-64  w-full bg-cover bg-center px-4">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[url('/src\images\image-1.png')] h-64  w-full bg-cover bg-center px-4">
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
 
       <div className="container-custom section-padding  relative z-10 animate-fade-in text-center lg:text-start">
@@ -87,6 +96,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
