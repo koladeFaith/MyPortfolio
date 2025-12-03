@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden w-full bg-cover bg-center px-4"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden w-full h-full bg-cover bg-center px-4"
       style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
 
