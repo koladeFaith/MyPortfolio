@@ -30,7 +30,13 @@ const Hero = () => {
           <div className="lg:flex justify-between items-center gap-28">
             <div className="flex justify-center mb-5 animate-on-scroll slide-in-left">
               <Avatar className="h-40 w-40 lg:h-80 lg:w-80 border-4 shadow-lg bg-cover bg-left">
-                <AvatarImage src={profilePics} alt="Profile Picture" />
+                <AvatarImage
+                  src={profilePics}
+                  alt="Profile Picture"
+                  width={100}
+                  height={100}
+                  className="w-full h-full bg-cover overflow-hidden"
+                />
                 <AvatarFallback className="bg-primary text-primary-foreground text-3xl">
                   KF
                 </AvatarFallback>
