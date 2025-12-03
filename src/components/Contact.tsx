@@ -16,8 +16,7 @@ const Contact = () => {
   const [toastVisible, setToastVisible] = useState(false);
   const [toastText, setToastText] = useState("");
 
-  // Set this to your WhatsApp number in international format without + or spaces
-  // e.g. Nigeria +2349160824156 => 2349160824156
+  
   const whatsappNumber = "2349160824156";
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -103,7 +102,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-muted-foreground">Ogbomosho, Nigeria</p>
+                  <p className="text-muted-foreground">Nigeria</p>
                 </div>
               </div>
             </div>
