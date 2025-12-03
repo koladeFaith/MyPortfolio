@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="/resume.pdf"
+            href="/Kolade_Faith_Aramide_Resume%20(2).pdf"
             download
             aria-label="Download resume"
             className="hidden lg:inline-flex items-center hover:cursor-pointer">
@@ -119,7 +119,7 @@ const Navbar = () => {
             ))}
             <hr className="bg-red-200 w-40 mt-10" />
             <a
-              href="/resume.pdf"
+              href="/Kolade_Faith_Aramide_Resume%20(2).pdf"
               download
               aria-label="Download resume"
               className="hover:cursor-pointer text-2xl">

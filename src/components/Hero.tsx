@@ -23,7 +23,7 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden w-full h-full bg-cover bg-center px-4"
       style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] container-custom" />
 
       <div className="container-custom section-padding relative z-10 animate-fade-in text-center lg:text-start">
         <div className="space-y-3 max-w-4xl mx-auto">
