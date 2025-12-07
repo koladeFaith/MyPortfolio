@@ -125,7 +125,9 @@ const Navbar = () => {
               className="hover:cursor-pointer text-2xl">
               My Resume
             </a>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at rem nostrum accusamus optio aperiam nisi enim minus dolorem rerum labore ad, libero ab hic sunt, unde, laudantium asperiores corporis.
           </div>
+      
         </div>
       </div>
     </nav>
