@@ -39,8 +39,8 @@ const Projects = () => {
       tech: ["HTML", "CSS", "TailwindCSS"],
       image:
         "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
-      codeUrl: "https://github.com/koladeFaith/caferio",
-      liveUrl: "https://caferio.example.com",
+      codeUrl: "https://github.com/koladeFaith/Caferio-website-clone",
+      liveUrl: "https://caferio-ui.vercel.app/",
     },
     {
       title: "Quote Generator App",
@@ -49,8 +49,8 @@ const Projects = () => {
       tech: ["JavaScript", "REST API", "React", "TailwindCSS"],
       image:
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
-      codeUrl: "https://github.com/koladeFaith/quote-generator",
-      liveUrl: "https://quotes.example.com",
+      codeUrl: "https://github.com/koladeFaith/Quote_api_react",
+      liveUrl: "https://quote-api-react.vercel.app/",
     },
   ];
 

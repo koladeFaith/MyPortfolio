@@ -4,7 +4,7 @@ import bgImage from "@/images/image-1.png";
 const Footer = () => {
   return (
     <footer
-      className="relative overflow-hidden w-full bg-cover bg-left border-t"
+      className="relative overflow-hidden w-full bg-cover bg-left border-t bg-[#DCDBDB]"
       style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container-custom py-8">
         <div className="flex flex-col items-center gap-6 animate-on-scroll slide-in-up">
