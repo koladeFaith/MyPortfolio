@@ -12,16 +12,16 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Projects = () => {
   const { ref, isVisible } = useScrollAnimation();
   const projects = [
-    {
-      title: "E-commerce Platform",
-      description:
-        "A modern, responsive e-commerce website with shopping cart functionality and payment integration",
-      tech: ["React", "Javascript", "Tailwind CSS"],
-      image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      codeUrl: "https://github.com/koladeFaith/Google_Keep_Project",
-      liveUrl: "https://food-delivery-five-chi.vercel.app/",
-    },
+    // {
+    //   title: "E-commerce Platform",
+    //   description:
+    //     "A modern, responsive e-commerce website with shopping cart functionality and payment integration",
+    //   tech: ["React", "Javascript", "Tailwind CSS"],
+    //   image:
+    //     "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+    //   codeUrl: "https://github.com/koladeFaith/Google_Keep_Project",
+    //   liveUrl: "https://food-delivery-five-chi.vercel.app/",
+    // },
     {
       title: "Note Keep App",
       description:
@@ -33,14 +33,24 @@ const Projects = () => {
       liveUrl: "https://google-keep-project.vercel.app/",
     },
     {
-      title: "Portfolio Dashboard",
+      title: "Caferio Website",
       description:
-        "Analytics dashboard with interactive charts and data visualization components",
-      tech: ["React", "TypeScript", "Recharts"],
+        "A responsive café website designed to showcase menu items, brand identity, and business information with a modern layout.",
+      tech: ["HTML", "CSS", "TailwindCSS"],
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      codeUrl: "https://github.com/koladeFaith/portfolio-dashboard",
-      liveUrl: "https://dashboard.example.com",
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/caferio",
+      liveUrl: "https://caferio.example.com",
+    },
+    {
+      title: "Quote Generator App",
+      description:
+        "A quote generator application that fetches and displays inspirational quotes from a public API with dynamic updates.",
+      tech: ["JavaScript", "REST API", "React", "TailwindCSS"],
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/quote-generator",
+      liveUrl: "https://quotes.example.com",
     },
   ];
 
