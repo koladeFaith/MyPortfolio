@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="/Kolade_Faith_Aramide_Resume%20(2).pdf"
+            href="public\Kolade_Faith_Aramide_Resume (4).pdf"
             download
             aria-label="Download resume"
             className="hidden lg:inline-flex items-center hover:cursor-pointer">
