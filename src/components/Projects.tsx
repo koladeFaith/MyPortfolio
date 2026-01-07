@@ -23,6 +23,26 @@ const Projects = () => {
     //   liveUrl: "https://food-delivery-five-chi.vercel.app/",
     // },
     {
+      title: "Mini Dashboard Web Application",
+      description:
+        "A responsive mini dashboard featuring summary cards and basic data visualization for tracking key metrics.",
+      tech: ["React", "TailwindCSS", "TanStack React Query", "JavaScript"],
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/mini-dashboard-web-application",
+      liveUrl: "https://mini-dashboard-web-application.vercel.app",
+    },
+    {
+      title: "Quote Generator App",
+      description:
+        "A quote generator application that fetches and displays inspirational quotes from a public API with dynamic updates.",
+      tech: ["JavaScript", "REST API", "React", "TailwindCSS"],
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+      codeUrl: "https://github.com/koladeFaith/Quote_api_react",
+      liveUrl: "https://quote-api-react.vercel.app/",
+    },
+    {
       title: "Note Keep App",
       description:
         "Collaborative task management application with real-time updates and team features",
@@ -41,16 +61,6 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
       codeUrl: "https://github.com/koladeFaith/Caferio-website-clone",
       liveUrl: "https://caferio-ui.vercel.app/",
-    },
-    {
-      title: "Quote Generator App",
-      description:
-        "A quote generator application that fetches and displays inspirational quotes from a public API with dynamic updates.",
-      tech: ["JavaScript", "REST API", "React", "TailwindCSS"],
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
-      codeUrl: "https://github.com/koladeFaith/Quote_api_react",
-      liveUrl: "https://quote-api-react.vercel.app/",
     },
   ];
 
