@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="space-y-3 max-w-4xl mx-auto">
           <div className="lg:flex justify-between items-center gap-28">
             <div className="flex justify-center mb-5 animate-on-scroll slide-in-left">
-              <Avatar className="h-40 w-40 lg:h-80 lg:w-80 border-4 shadow-lg">
+              <Avatar className="h-40 w-40 lg:h-75 lg:w-75 border-4 shadow-lg">
                 <AvatarImage
                   src={profilePics}
                   alt="Profile Picture"
