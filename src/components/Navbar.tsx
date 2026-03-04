@@ -52,7 +52,7 @@ const Navbar = () => {
         isScrolled
           ? "bg-white/10 backdrop-blur-md border-b border-border shadow-sm"
           : "bg-transparent"
-      }`}>lorem 
+      }`}>
       <div>
         <div className="flex items-center justify-between h-16 lg:mx-10 xl:mx-60">
           {/* FIXED LOGO */}
