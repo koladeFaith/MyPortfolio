@@ -124,7 +124,7 @@ const Navbar = () => {
         {/* BACKDROP OVERLAY */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-0 bg-black/10 backdrop-blur-xl z-50 transition-opacity"
+            className="fixed w-full h-100 inset-0 bg-black/10 backdrop-blur-xl z-99 transition-opacity"
             onClick={() => setIsMobileMenuOpen(false)}></div>
         )}
       </div>
