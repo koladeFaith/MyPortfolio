@@ -47,88 +47,90 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/10 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}>
-      <div>
-        <div className="flex items-center justify-between h-16 lg:mx-10 xl:mx-60">
-          {/* FIXED LOGO */}
-          <img
-            src={logo}
-            onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold text-gradient hover:opacity-80 transition-opacity w-30 lg:w-40 cursor-pointer z-100"
-          />
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/10 backdrop-blur-md border-b border-border shadow-sm"
+            : "bg-transparent"
+        }`}>
+        <div>
+          <div className="flex items-center justify-between h-16 lg:mx-10 xl:mx-60">
+            {/* FIXED LOGO */}
+            <img
+              src={logo}
+              onClick={() => scrollToSection("hero")}
+              className="text-xl font-bold text-gradient hover:opacity-80 transition-opacity w-30 lg:w-40 cursor-pointer z-100"
+            />
 
-          <div className="hidden lg:flex items-center gap-9">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-[16px] font-medium text-black/90 hover:text-foreground transition-colors relative group hover:cursor-pointer">
-                {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </button>
-            ))}
-          </div>
+            <div className="hidden lg:flex items-center gap-9">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-[16px] font-medium text-black/90 hover:text-foreground transition-colors relative group hover:cursor-pointer">
+                  {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                </button>
+              ))}
+            </div>
 
-          <a
-            href="public\Kolade_Faith_Aramide_Resume (4).pdf"
-            download
-            aria-label="Download resume"
-            className="hidden lg:inline-flex items-center hover:cursor-pointer">
-            My Resume
-          </a>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? (
-              <X size={34} className="z-100" />
-            ) : (
-              <Menu size={34} />
-            )}
-          </Button>
-        </div>
-
-        <div
-          className={`
-            py-4 fixed backdrop-blur-xl w-full h-full z-100
-            transition-transform duration-300
-            ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
-          `}>
-          <div className="flex flex-col gap-8 justify-center items-center mt-12 text-center">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-left text-3xl font-medium text-foreground/80 hover:text-foreground transition-colors py-2 hover:cursor-pointer">
-                {link.name}
-              </button>
-            ))}
-            <hr className="bg-red-200 w-40 mt-10" />
             <a
-              href="/Kolade_Faith_Aramide_Resume%20(2).pdf"
+              href="public\Kolade_Faith_Aramide_Resume (4).pdf"
               download
               aria-label="Download resume"
-              className="hover:cursor-pointer text-2xl">
+              className="hidden lg:inline-flex items-center hover:cursor-pointer">
               My Resume
             </a>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+              {isMobileMenuOpen ? (
+                <X size={34} className="z-100" />
+              ) : (
+                <Menu size={34} />
+              )}
+            </Button>
+          </div>
+
+          <div
+            className={`
+              py-4 fixed backdrop-blur-xl w-full h-full z-100
+              transition-transform duration-300
+              ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
+            `}>
+            <div className="flex flex-col gap-8 justify-center items-center mt-12 text-center">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-left text-3xl font-medium text-foreground/80 hover:text-foreground transition-colors py-2 hover:cursor-pointer">
+                  {link.name}
+                </button>
+              ))}
+              <hr className="bg-red-200 w-40 mt-10" />
+              <a
+                href="/Kolade_Faith_Aramide_Resume%20(2).pdf"
+                download
+                aria-label="Download resume"
+                className="hover:cursor-pointer text-2xl">
+                My Resume
+              </a>
+            </div>
           </div>
         </div>
+      </nav>
 
-        {/* BACKDROP OVERLAY */}
-        {isMobileMenuOpen && (
-          <div
-            className="fixed w-full h-100 inset-0 bg-black/10 backdrop-blur-xl z-99 transition-opacity"
-            onClick={() => setIsMobileMenuOpen(false)}></div>
-        )}
-      </div>
-    </nav>
+      {/* BACKDROP OVERLAY - OUTSIDE NAV */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/10 backdrop-blur-xl z-50 transition-opacity"
+          onClick={() => setIsMobileMenuOpen(false)}></div>
+      )}
+    </>
   );
 };
 
