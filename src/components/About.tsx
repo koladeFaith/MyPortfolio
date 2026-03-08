@@ -22,7 +22,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-[#DCDBDB]">
+    <section id="about" className="section-padding bg-[#DCDBDB] w-full h-full">
       <div className="container-custom" ref={ref}>
         <h2
           className={`text-4xl md:text-5xl font-bold text-center mb-12 transition-all duration-700 ${

@@ -95,13 +95,6 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* BACKDROP OVERLAY */}
-        {isMobileMenuOpen && (
-          <div
-            className="fixed inset-0 bg-black/10 backdrop-blur-xl z-40 transition-opacity"
-            onClick={() => setIsMobileMenuOpen(false)}></div>
-        )}
-
         <div
           className={`
             py-4 fixed backdrop-blur-xl w-full h-full z-100
@@ -127,6 +120,13 @@ const Navbar = () => {
             </a>
           </div>
         </div>
+
+        {/* BACKDROP OVERLAY */}
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black/10 backdrop-blur-xl z-50 transition-opacity"
+            onClick={() => setIsMobileMenuOpen(false)}></div>
+        )}
       </div>
     </nav>
   );
